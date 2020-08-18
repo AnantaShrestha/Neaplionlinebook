@@ -65,7 +65,7 @@ class CategoryController extends Controller
         $count=$this->category->count();
         $order=$count+1;
         $form_data=array(
-        	'name' =>$request->category_name,
+        	'name' =>$request->name,
         	'slug' =>$request->slug,
         	'status'=>isset($request->status) ? 1 : 0,
             'sort_id' =>$order
@@ -97,7 +97,7 @@ class CategoryController extends Controller
         }
     
         $form_data=array(
-        	'name' =>$request->category_name,
+        	'name' =>$request->name,
         	'slug' =>$request->slug,
         	'status'=>isset($request->status) ? 1 : 0,
         );
